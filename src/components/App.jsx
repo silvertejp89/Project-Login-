@@ -1,23 +1,18 @@
 import React from 'react';
-import Login from './Login';
+import Form from './Form';
 
-var isLoggedIn = false;
-
-// function conditionallyRender() {
-//   if (isLoggedIn === true) {
-//     return <h1>Hello</h1>;
-//   } else {
-//     return <Login />;
-//   }
-// }
+// var isLoggedIn = false;
+var userIsRegistered = false;
 
 function App() {
   return (
-    <div className="container">{isLoggedIn ? <h1>Hello</h1> : <Login />}</div>
+    <div className="container">
+      <Form isRegistered={userIsRegistered} />
+    </div>
   );
 }
 
 export default App;
 
-//conditional rendering, separations of concerns
+//conditional rendering, separations of concerns, ternary operator
 
