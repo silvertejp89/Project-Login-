@@ -1,7 +1,17 @@
 import React from 'react';
 
 function Input(props) {
-  return <input type={props.input} placeholder={props.placeholder} />;
+  function handleChange(event) {
+    console.log(event.target.value);
+  }
+
+  return (
+    <input
+      onChange={handleChange}
+      type={props.input}
+      placeholder={props.placeholder}
+    />
+  );
 }
 
 export default Input;
