@@ -1,13 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Form from './Form';
 
-// var isLoggedIn = false;
-var userIsRegistered = false;
+// var userIsRegistered = true;
 
 function App() {
+  const [userIsRegistered, setRegistered] = useState(true);
+
+  console.log(userIsRegistered);
+
+  function handleRegistration() {
+    setRegistered(false);
+  }
+
   return (
     <div className="container">
       <Form isRegistered={userIsRegistered} />
+      <button onClick={handleRegistration}>Change state</button>
     </div>
   );
 }
