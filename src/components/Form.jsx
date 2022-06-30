@@ -4,6 +4,7 @@ import Input from './Input';
 function Form(props) {
   return (
     <form className="form">
+      <h1>Welcome!</h1>
       <Input type="text" placeholder="Username" />
       <Input type="password" placeholder="Password" />
       {props.isRegistered === false && (
